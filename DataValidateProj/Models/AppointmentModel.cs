@@ -9,6 +9,18 @@ namespace DataValidateProj.Models
         [StringLength(30, MinimumLength = 4)]
         [DisplayName("Patient's Full Name")]
         public string PatientName { get; set; }
+        [DisplayName("Street Address")]
+        public string Street { get; set; }
+        public string City { get; set; }
+        [DataType(DataType.PostalCode)]
+        public string ZipCode { get; set; }
+        [DisplayName("Email Address")]
+        [DataType(DataType.EmailAddress)]
+        public string email { get; set; }
+        [DataType(DataType.PhoneNumber)]
+        [DisplayName("10 digit Phone Number")]
+        public string Phone { get; set; }
+
         [DataType(DataType.Date)]
         [DisplayName("Appoint Request Date")]
         public DateTime AppointmentDate { get; set; }
